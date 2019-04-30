@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/tourism.css">
+    <script type="text/javascript" src="./js/js.js"></script>
+    <title>旅途</title>
+    <script>
+		var pixelRatio = 1/window.devicePixelRatio;
+		document.write('<meta name="viewport" content="width=device-width, initial-scale=' + pixelRatio + ', maximun-scale=' + pixelRatio + ', minimun-scale=' + pixelRatio + '">')
+		var html = document.getElementsByTagName('html')[0];
+		var pageWidth = html.getBoundingClientRect().width;
+		html.style.fontSize = pageWidth / 10 +"px";
+	</script>
+</head>
+<body>
+<div class="top">
+    <div>
+      <a href="file:///C:/Users/Administrator/Desktop/Tourism/index.html"><img src="./imgs/1.png"></a>
+      <img src="./imgs/2.png">
+    </div>
+</div>
+<div class="banner"></div>
+<div class="tour">
+    <p>【2018 | 首尔旅游攻略】</p>
+    <div>
+        <div class="tourlf">
+            <img src="./imgs/3.png">
+        </div>
+        <div class="tourrg">
+            <ul>
+                <li>
+                    <span>小狮妹</span>
+                    <img src="./imgs/4.png"></li>
+                <li><span>66</span> 回复 | <span>431</span> 收藏 | <span>5684</span> 浏览</li>
+                <li>发布于2018-03-12 10：32</li>
+            </ul>
+        </div>
+    </div>
+    <div class="tour_bot"></div>
+</div>
+<div class="trip">
+    <p>行程单</p>
+    <div class="trip_tab">
+        <ul>
+            <li>
+                <div>
+                    <p>D1</p>
+                    <p>04-05</p>
+                </div>
+                <p>
+                    <a href="#">上海-首尔 </a>
+                    <span>在阿里旅行上买机票，一开始看的时候是南航，早上8:30起飞，回来那天18:55起飞，感觉时间都是极好的</span>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <p>D2</p>
+                    <p>04-06</p>
+                </div>
+                <p>
+                    <span>首尔的酒店，一开始是在携程上看的，按照地理位置，酒店星级数，看中了一家位于明洞的“明洞天空花园中央酒店”，4晚2700+，而且此酒店还有公主房，可惜没订到。</span>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <p>D3</p>
+                    <p>04-07</p>
+                </div>
+                <p>
+                    <span>签证，很简单，相信大部分同学们都是这样，taobao拍上韩国签证，小歪找的那家，258一人，上海地区还不需要财产证明，只需要护照，照片，身份证，填表格就行了</span>
+                </p>
+            </li>
+            <li id="last_li">
+                <div>
+                <span>查看全部五日行程</span>
+                <img src="./imgs/5.png">
+                </div>
+            </li>
+        </ul>
+        <ul id="last_li2">
+            <li>
+                <div>
+                    <p>D4</p>
+                    <p>04-07</p>
+                </div>
+                <p>
+                            <span>签证，很简单，相信大部分同学们都是这样，taobao拍上韩国签证，小歪找的那家，258一人，上海地区还不需要财产证明，只需要护照，照片，身份证，填表格就行了</span>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <p>D5</p>
+                    <p>04-07</p>
+                </div>
+                <p>
+                    <span>签证，很简单，相信大部分同学们都是这样，taobao拍上韩国签证，小歪找的那家，258一人，上海地区还不需要财产证明，只需要护照，照片，身份证，填表格就行了</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="banner_li"></div>
+<div class="banner_ly"></div>
+<div class="wz">
+        <p>1. 通讯：去某宝上买韩国电话卡最方便，大概10元/天，别再买蛋了，那个东西又重又麻烦价格跟电话卡差不多<br>
+       2. 机场市区交通：无论仁川&金浦又快又便宜的方式是地铁；巴士时间较长价格比地铁贵些；打车巨贵打不起。所以我一般是坐地铁从仁川到市区&坐大巴从市区回机场（视个人情况而定，如果酒店附近有机场巴士车站，你又不怎么赶时间，大巴还是非常省力的）。机场巴士：通往市区各酒店的豪华大巴90元左右，高峰时段要2个小时到机场。</p>
+</div>
+<div class="foot">
+    <div id="foot">
+        <i></i>
+        <span>赞229</span>
+    </div>
+    <input type="text" value="回复楼主">
+    <div>
+        <i id="collection"></i>
+        <i id="share"></i>
+    </div>
+</div>
+<script>
+    window.onload = function(){
+        var lastli = document.getElementById('last_li')
+        var lastli2 = document.getElementById('last_li2')
+        var oCollection = document.getElementById('collection')
+        var oShare = document.getElementById('share')
+        var oFoot = document.getElementById('foot')
+        var Span = oFoot.getElementsByTagName('span')
+        lastli.onclick=function(){
+            lastli.style.display="none";
+            lastli2.style.display="block";
+	    }
+        oCollection.onclick=function(){
+            alert('收藏成功')
+        }
+        oShare.onclick=function(){
+            alert('分享成功')
+        }
+    }
+</script>
+</body>
+</html>
